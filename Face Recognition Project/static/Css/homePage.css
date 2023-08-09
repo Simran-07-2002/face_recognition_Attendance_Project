@@ -1,0 +1,57 @@
+
+#optiFaceWorkingShown
+{
+    position: relative;
+}
+.howOptiFaceWorksContent ::before {
+    content: " ";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 45px;
+    background: url("https://attendlab.com/wp-content/themes/appilo/images/gradient-sep.png") no-repeat center center;
+    /* top: 0; */
+}
+.astappWorks .icon-box .inner ::before{
+    /* position: absolute; */
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 50%;
+    /* background: #fff; */
+    /* transition:all .4s ease; */
+}
+
+/* .text-box::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("/Html/computer-solid.svg"), linear-gradient(45deg, #f67373, transparent);
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+.icon-box{
+    content: "";
+    position: relative;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: linear-gradient(#fb7019,#E2F6CA);
+
+}
+.icon{
+    position: relative;
+    content: "";
+    width: 33%;
+    height: 33%;
+    background-image: url("/static/Photos/computer-solid.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -37px;
+    right: -15px;
+
+}

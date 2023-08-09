@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optiFace</title>
+
+    <!-- Bootstrap cdn (Content delivery network) link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Bootstrap JS cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- linking external CSS file -->
+    <link rel="stylesheet" href="/static/Css/homePage.css">
+
+    <!-- favicon icon -->
+    <script src="https://kit.fontawesome.com/16ca68dc49.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.ico?v=2">
+    
+
+
+</head>
+
+<body>
+
+    <!-- header file including -->
+        {% include 'header.html' %}
+
+<div class="coloringClass" style="background-color: #E2F6CA;">
+
+    <section class="container p-4 mb-5 mt-4" >
+        <!-- Home page starting -->
+        
+            <div class="row p-5 text-center ">
+                <div class="col-lg-12 align-items-center justify-content-center d-flex">
+                    <h1 class="fw-bold" id="">Your face is your key: “Unlocking
+                        the future of Attendance Management”.</h1>
+                </div>
+                <div class="col-lg-6">
+                    <!-- <img src="fotor-ai-20230714235358.jpg" -->
+                    <!-- class=" title-image img-fluid" alt="Attendance mockup"> -->
+                </div>
+
+            </div>
+        
+    </section>
+</div>
+
+    <section class="white-section my-5 " id="working">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="/static/Photos/Group 3.png" alt="workingEnvironment" class="circled-img img-fluid">
+
+                    <!-- <img src="https://attendlab.com/wp-content/uploads/2019/08/circle.png" alt="homePageImage">
+                    <img src="https://attendlab.com/wp-content/uploads/2019/09/pc-mock.png" alt="HowOptiFaceWorks"
+                        class="circled-img">
+                        <img src="aboutUsImage.jpg" alt="homePageImage"> -->
+                </div>
+
+                <!-- <div class="col-lg-6">
+                    <div class="title">
+                        <h2>How optiFace Works?</h2>
+                    </div>
+
+                    <div class="col-lg-8 m-5">
+                        <h3>
+                            <i class="fa-solid fa-computer text-dark me-5"></i>
+                            <span> Sign Up/Login</span>
+                        </h3>
+
+                    </div>
+                    <div class="col-lg-8 m-5">
+
+                        <h3><i class="fa-solid fa-users me-5"></i>
+                            <span>Add Users</span>
+                        </h3>
+
+                    </div>
+                    <div class="col-lg-8 m-5">
+
+                        <h3><i class="fa-solid fa-icons me-5"></i>
+                            <span>Train</span>
+                        </h3>
+
+                    </div>
+                    <div class="col-lg-8 m-5">
+
+                        <h3><i class="fa-solid fa-clipboard-user me-5"></i>
+                            <span>Attendance Report</span>
+                        </h3>
+
+                    </div>
+
+                </div> -->
+
+                <!-- creating new optiFace works page -->
+                <div class="col-lg-6 position-relative pt-5">
+                    <div class="title">
+                        <h3>How optiFace Works?</h3>
+                    </div>
+                    <div class="" id="optiFaceWorkingShown">
+                        <!-- 1st option -->
+                    <!-- <a href="#" class=""  style="text-decoration: none;">
+                        <div class="astappWorks">
+                            <div class="icon-box">
+                                <div class="inner">
+                                </div>
+                                <i class="fa-solid fa-computer text-dark me-5"></i>
+                            </div>
+                            <div class="text-box">
+                                <a href="loginPage.html" style="text-decoration: none;">
+                                    <h3>Sign in/Login</h3>
+                                </a>
+                                <p>Just click the button to sign up</p>
+                                <p>Enter Admin information</p>
+                            </div>
+                        </div>
+                    </a> -->
+                    <!-- 2nd option -->
+                    <!-- <a href="#" class="" style="text-decoration: none;">
+                        <div class="astappWorks">
+                            <div class="icon-box">
+                                <div class="inner">
+                                </div>
+                                <i class="fa-solid fa-users me-5"></i>
+                            </div>
+                            <div class="text-box">
+                                <a href="train.html" style="text-decoration: none;">
+                                    <h3>Train</h3>
+                                </a>
+                                <p>Add users by uploading their images</p>
+                                <p>Add respective details</p>
+                            </div>
+                        </div>
+                    </a> -->
+                    <!-- 3rd option -->
+                    <!-- <a href="#" class="" style="text-decoration: none;">
+                        <div class="astappWorks">
+                            <div class="icon-box">
+                                <div class="inner">
+                                </div>
+                                <i class="fa-solid fa-clipboard-user me-5"></i>
+                            </div>
+                            <div class="text-box">
+                                <a href="attendance.html" style="text-decoration: none;">
+                                    <h3>Attendance</h3>
+                                </a>
+                                <p>Acknowledge your presence</p>
+                            </div>
+                        </div>
+                    </a> -->
+                    
+                            
+                        <!-- <div class="row">
+
+                            <div class="text-box col-2">
+                                
+                            </div>
+                            <div class="col-4">
+                                <a href="attendance.html" style="text-decoration: none;">
+                                    <h3>Attendance</h3>
+                                </a>
+                                <p>Acknowledge your presence</p>
+                            </div>
+                        </div> -->
+                        <!-- 1st card option -->
+                        <div class="row mb-4">
+                            <div class="text-box col-2">
+
+                                <div class="icon-box">
+                                </div>
+                                <div class="icon">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <a href="attendance.html" style="text-decoration: none;">
+                                    <h3>Login</h3>
+                                </a>
+                                <p>Acknowledge your presence</p>
+                            </div>
+                        </div>
+
+                        <!-- 2nd card option -->
+                        <div class="row mb-4">
+                            <div class="text-box col-2">
+
+                                <div class="icon-box">
+                                </div>
+                                <div class="icon">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <a href="attendance.html" style="text-decoration: none;">
+                                    <h3>Train the Model</h3>
+                                </a>
+                                <p>Acknowledge your presence</p>
+                            </div>
+                        </div>
+
+                        <!-- 3rd card option -->
+                        <div class="row mb-4">
+                            <div class="text-box col-2">
+
+                                <div class="icon-box">
+                                </div>
+                                <div class="icon">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <a href="attendance.html" style="text-decoration: none;">
+                                    <h3>Attendance</h3>
+                                </a>
+                                <p>Acknowledge your presence</p>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+
+</body>
+
+</html>

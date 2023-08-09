@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optiFace</title>
+
+
+    <!-- Bootstrap cdn (Content delivery network) link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Bootstrap JS cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+
+    <!-- favicon icon -->
+    <script src="https://kit.fontawesome.com/16ca68dc49.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.ico?v=2">
+
+    <!-- JAVASCRIPT/JQUERY -->
+
+    <script type=text/javascript>
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+
+        $(function () {
+            $('a#attendanceClick').bind('click', function () {
+                alert("this is query for click button")
+                $.getJSON($SCRIPT_ROOT + 'sampleAttendanceModel', {
+
+                }, function (data) {
+                    $("#attendanceClick").text(data.result);
+                });
+                return false;
+            });
+        }
+        );
+
+    </script>
+    <style>
+        #videoCam {
+            width: 95%;
+            height: 80%;
+            margin-left: 0px;
+            border: 3px;
+            background: black;
+        }
+
+        #startBtn {
+            width: 170px;
+            height: 45px;
+            cursor: pointer;
+
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- header file including -->
+    {% include 'header.html' %}
+
+    <section class="attendance py-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- video tag -->
+                    <video id="videoCam" autoplay="True"></video>
+                    <button id="startBtn" onclick="openCam()">Open Webcam</button>
+                    <div class="d-grid  mt-3">
+                        <a href="#" id="attendanceClick">
+                            <button type="signup" class="btn btn-outline-dark">Click</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Instructions</h3>
+                    <h5 class="my-4 text-start">
+                        <i class="fa-solid fa-tv"></i>
+                        Position yourself correctly within the camera's frame for attendance registration.
+                    </h5>
+                    <h5 class="my-4 text-start">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/messages-mac.png"
+                            alt="messages-mac" />
+                        If your face is not recognized, you will receive a prompt indicating that you are not
+                        registered. Please proceed to complete the registration process.
+                    </h5>
+
+                    <h5 class="my-4 text-start">
+                        <img width="35" height="30" src="https://img.icons8.com/material-sharp/24/reviewer-female.png"
+                            alt="reviewer-female" />
+                        Upon successful registration, you will receive a confirmation message indicating your attendance
+                        has been recorded, along with the precise time, date, and any additional details you have
+                        provided.
+                    </h5>
+
+                    <div class="d-grid gap-2 m-3">
+                        <a href="#">
+                            <button type="attendanceReport" class="btn btn-outline-dark">
+                                <img width="20" height="20"
+                                    src="https://img.icons8.com/ios-filled/50/statistics-report.png"
+                                    alt="statistics-report" />
+                                Attendance Report</button>
+                        </a>
+                    </div>
+
+                    <div class="d-grid gap-2 m-3">
+                        <a href="homePage.html">
+                            <button type="homePage" class="btn btn-outline-dark">
+                                <i class="fa-solid fa-house"></i>
+                                Visit Home Page</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+
+    <script>
+        function openCam() {
+            let All_mediaDevices = navigator.mediaDevices
+            if (!All_mediaDevices || !All_mediaDevices.getUserMedia) {
+                console.log("getUserMedia() not supported.");
+                return;
+            }
+            All_mediaDevices.getUserMedia({
+                audio: true,
+                video: true
+            })
+
+                .then(function (vidStream) {
+                    var video = document.getElementById('videoCam');
+                    if ("srcObject" in video) {
+                        video.srcObject = vidStream;
+                    } else {
+                        video.src = window.URL.createObjectURL(vidStream);
+                    }
+                    video.onloadedmetadata = function (e) {
+                        video.play();
+                    };
+                })
+
+                .catch(function (e) {
+                    console.log(e.name + ": " + e.message);
+                });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

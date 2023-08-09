@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optiFace</title>
+
+    <!-- Bootstrap cdn (Content delivery network) link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Bootstrap JS cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!-- linking external CSS file -->
+    <link rel="stylesheet" href="/static/Css/aboutUs.css">
+
+    <!-- favicon icon -->
+    <script src="https://kit.fontawesome.com/16ca68dc49.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.ico?v=2">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+        
+    </head>
+    <body>
+         <!-- header file including -->
+         {% include 'header.html' %}
+              
+              <!-- About us starting -->
+        <section class="aboutUs" id="about us">
+            <div class="container-fluid text-center " id="AboutUsStarting">
+                <h2 class="text-center my-2 ">About Us</h2>
+                <div class="row text-center">
+                    <div class="col-lg-6 align-items-center justify-content-center d-flex">
+                        <h1 class="" id="aboutUsHeading">Pioneering the Future of Attendance: "Welcome to optiFace Innovations."</h1>
+                        
+                    </div>
+                    <div class="col-lg-6 pt-5">
+                        <img src="https://www.salarybox.in/wp-content/uploads/2023/04/Employee-Management-Discussion.webp" class="container-fluid aboutUsImage " alt="workingWnvironment" style="height: 75%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="mission pb-5" id="mission">
+            <div class="container text-center">
+                <h2 class="text-center pb-4">Our Mission</h2>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <!-- 1st card -->
+                    <div class="col">
+                      <div class="card">
+                          <h1><i class="fa-solid fa-bullseye"></i></h1>
+                        
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">Visionary Attendance Solutions</h5>
+                          <p class="card-text">At optiFace Technologies, we are driven by the vision of revolutionizing attendance management through the implementation of advanced face recognition technology. Our project is dedicated to developing a state-of-the-art face recognition-based attendance system..</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 2nd card -->
+                    <div class="col">
+                      <div class="card">
+                          <h1><i class="fa-solid fa-bullseye"></i></h1>
+                        
+                        <div class="card-body">
+                          <h5 class="card-title">Cutting-Edge Technology</h5>
+                          <p class="card-text"> With expertise in machine learning, TensorFlow, face recognition modules, OpenCV, HTML/CSS, Python Flask, SQLite, JavaScript, and jQuery, we harness the power of these technologies to create an accurate, efficient, and user-friendly attendance solution</p>
+
+                                
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 3rd  card -->
+                    <div class="col">
+                        <div class="card">
+                            
+                        <div class="card-body">
+                        <h1><i class="fa-solid fa-bullseye"></i></h1>
+                          <h5 class="card-title">Precision and Security Measures</h5>
+                          <p class="card-text"> optiFace prioritize accuracy and security in attendance tracking. Our system utilizes advanced face recognition algorithms to precisely identify and verify individuals, ensuring that attendance records are reliable. Real-time monitoring and anti-spoofing measures.</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    
+                    <!--4th card  -->
+                    <div class="col">
+                      <div class="card">
+                        <h1><i class="fa-solid fa-bullseye"></i></h1>
+                        <div class="card-body">
+                          <h5 class="card-title">Empowering Organizations</h5>
+                          <p class="card-text">  Ultimately, optiFace mission is to empower organizations with an advanced face recognition-based attendance system that optimizes their attendance management processes. By reducing administrative burdens and providing accurate and efficient attendance tracking.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+        </section>
+        
+        <!-- Footer -->
+    {% include 'footer.html' %}
+         
+
+
+    </body>
+</html>
